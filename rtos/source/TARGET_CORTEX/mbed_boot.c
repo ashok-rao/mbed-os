@@ -83,22 +83,22 @@ void mbed_init(void)
     SCnSCB->ACTLR |= SCnSCB_ACTLR_DISDEFWBUF_Msk;
 #endif
 #endif
-    mbed_mpu_manager_init();
+//    mbed_mpu_manager_init();
     mbed_cpy_nvic();
     mbed_sdk_init();
 #if DEVICE_USTICKER && MBED_CONF_TARGET_INIT_US_TICKER_AT_BOOT
-    us_ticker_init();
+  //  us_ticker_init();
 #endif
-    mbed_rtos_init();
+ //   mbed_rtos_init();
 }
 
 void mbed_start(void)
 {
-    mbed_rtos_init_singleton_mutex();
-    mbed_toolchain_init();
-    mbed_tfm_init();
-    mbed_main();
-    mbed_error_initialize();
+//    mbed_rtos_init_singleton_mutex();
+//    mbed_toolchain_init();
+ //   mbed_tfm_init();
+ //   mbed_main();
+ //   mbed_error_initialize();
     main();
 }
 
